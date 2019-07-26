@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.lindl.demosecurity.mapper.UserRoleMapper">
+    <resultMap id="userRole" type="com.lindl.demosecurity.entity.UserRole">
+        <id column="id" property="id" javaType="Long"></id>
+        <result column="user_id" property="userId" javaType="Long"></result>
+        <result column="role_id" property="roleId" javaType="Long"></result>
+    </resultMap>
+
+    <select id="findAll" resultMap="userRole">
+       select * from sys_user_role
+    </select>
+
+
+</mapper>
